@@ -1,17 +1,22 @@
 package com.scratchpad;
 
 public class Person {
+    private static int numberOfPeople;
+    private int id;
     private int age;
     private String firstName;
     private String lastName;
     private String direction;
 
     public Person(int age, String firstName, String lastName) {
+        numberOfPeople++;
+        id = numberOfPeople;
         this.age = age;
         this.firstName = firstName;
         this.lastName = lastName;
         this.firstName = firstName;
         direction = "North";
+        getNumberOfPeople();
     }
 
     public int getAge() {
@@ -70,4 +75,18 @@ public class Person {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", age=" + age +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", direction='" + direction + '\'' +
+                '}';
+    }
+
+    public static int getNumberOfPeople() {
+        return numberOfPeople;
+    }
 }
