@@ -6,9 +6,11 @@ public class Main {
         Person p1 = new Person(18, "Max", "Mueller");
         Person p2 = new Person(19, "Sarah", "Mueller");
 
-        System.out.println(p1);
-        System.out.println(p2);
-        System.out.println(Person.getNumberOfPeople());
+        System.out.println(Calculator.square(9));
+
+//        System.out.println(p1);
+//        System.out.println(p2);
+//        System.out.println(Person.getNumberOfPeople());
 
 
 //        for (int i = 3; i >= 0; i--) {

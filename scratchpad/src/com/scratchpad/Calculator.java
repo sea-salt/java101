@@ -1,5 +1,6 @@
 package com.scratchpad;
 
+
 public class Calculator {
 
     public static int add(int num1, int num2) {
@@ -13,6 +14,10 @@ public class Calculator {
         // 1.3 rounds to 1
         double result = num1 / num2;
         return result;
+    }
+
+    public static double square(double x) {
+        return Math.pow(x, 2);
     }
 
 }
