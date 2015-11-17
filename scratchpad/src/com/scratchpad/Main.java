@@ -1,12 +1,32 @@
 package com.scratchpad;
 
+import com.scratchpad.fish.Fish;
+import com.scratchpad.fish.FishTank;
+import com.scratchpad.fish.Goldfish;
+
 public class Main {
 
     public static void main(String[] arguments) {
-        Person p1 = new Person(18, "Max", "Mueller");
-        Person p2 = new Person(19, "Sarah", "Mueller");
+        Fish felix = new Fish("Felix");
+        Fish goldy = new Goldfish("Goldy");
 
-        System.out.println(Calculator.square(9));
+
+        FishTank fishTank = new FishTank();
+        fishTank.addFish(felix);
+        fishTank.addFish(goldy);
+
+        fishTank.print();
+
+
+
+
+//        boolean equals = felix.equals(goldy);
+//        boolean notEquals = !felix.equals(goldy);
+
+//        Person p1 = new Person(18, "Max", "Mueller");
+//        Person p2 = new Person(19, "Sarah", "Mueller");
+//
+//        System.out.println(Calculator.square(9));
 
 //        System.out.println(p1);
 //        System.out.println(p2);
