@@ -1,6 +1,7 @@
 package com.scratchpad;
 
 import com.scratchpad.fish.Fish;
+import com.scratchpad.fish.FishInterface;
 import com.scratchpad.fish.FishTank;
 import com.scratchpad.fish.Goldfish;
 
@@ -8,7 +9,8 @@ public class Main {
 
     public static void main(String[] arguments) {
         Fish felix = new Fish("Felix");
-        Fish goldy = new Goldfish("Goldy");
+        Goldfish goldy = new Goldfish("Goldy");
+        FishInterface bob = new Goldfish("Bob");
 
 
         FishTank fishTank = new FishTank();
