@@ -1,23 +1,46 @@
 package com.scratchpad;
 
-import com.scratchpad.fish.Fish;
-import com.scratchpad.fish.FishInterface;
-import com.scratchpad.fish.FishTank;
-import com.scratchpad.fish.Goldfish;
+import com.scratchpad.fish.creatures.Fish;
+import com.scratchpad.fish.creatures.Goldfish;
+import com.scratchpad.fish.creatures.Shark;
+import com.scratchpad.fish.tank.FishTank;
+import com.scratchpad.fish.tank.FishTankList;
 
 public class Main {
 
     public static void main(String[] arguments) {
-        Fish felix = new Fish("Felix");
-        Goldfish goldy = new Goldfish("Goldy");
-        FishInterface bob = new Goldfish("Bob");
+        Fish felix = new Goldfish("Felix");
+        Fish goldy = new Goldfish("Goldy");
+        Fish bob = new Shark("Bob");
+
+//        FishTank fishTankArray = new FishTankArray();
+//        fishTankArray.addFish(felix);
+//        fishTankArray.addFish(goldy);
+//        fishTankArray.addFish(bob);
+//        fishTankArray.print();
+
+        FishTank fishTankList = new FishTankList();
+        fishTankList.addFish(felix);
+        fishTankList.addFish(goldy);
+        fishTankList.addFish(bob);
+        fishTankList.print();
 
 
-        FishTank fishTank = new FishTank();
-        fishTank.addFish(felix);
-        fishTank.addFish(goldy);
 
-        fishTank.print();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
