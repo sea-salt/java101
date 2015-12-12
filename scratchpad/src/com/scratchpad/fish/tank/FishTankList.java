@@ -9,7 +9,7 @@ import java.util.List;
  * Created by larissa on 27.11.15.
  */
 public class FishTankList implements FishTank {
-    private List fishList;
+    private List<Fish> fishList;
 
     public FishTankList() {
         fishList = new ArrayList();
@@ -17,29 +17,34 @@ public class FishTankList implements FishTank {
 
     @Override
     public Fish getFish(int index) {
-        return null;
+        return fishList.get(index);
     }
 
     @Override
     public boolean addFish(Fish fish) {
-        return false;
+        return fishList.add(fish);
+    }
+
+    public boolean addFish(int index, Fish fish) {
+        fishList.add(index, fish);
+        return true;
     }
 
     @Override
     public boolean removeFish(Fish fish) {
-        return false;
+        return fishList.remove(fish);
     }
 
     @Override
     public void print() {
-        int x = 5;
-        String message = x > 4 ? "Happy" : "Sad";
-//        if (x > 4) {
-//            message = "Happy";
+        for (Fish fish : fishList) {
+            System.out.println(fish);
+        }
+
+//        Iterator<Fish> fishIterator = fishList.iterator();
+//        while (fishIterator.hasNext()) {
+//            System.out.println(fishIterator.next());
+//            fishIterator.remove();
 //        }
-//        else {
-//            message = "Sad";
-//        }
-        System.out.println(message);
     }
 }

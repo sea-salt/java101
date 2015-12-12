@@ -23,7 +23,21 @@ public class Main {
         fishTankList.addFish(felix);
         fishTankList.addFish(goldy);
         fishTankList.addFish(bob);
+        fishTankList.removeFish(goldy);
         fishTankList.print();
+
+
+//        Object mysteryObject = new Shark("Sharky");
+//        if (mysteryObject instanceof Shark) {
+//            // conversion from parent to child
+//            Shark mysteryShark = (Shark) mysteryObject;
+//            // conversion from child to parent
+//            Fish fish = mysteryShark;
+//            mysteryShark.swim();
+//        }
+
+     
+
 
 
 
