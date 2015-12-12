@@ -5,7 +5,7 @@ import com.scratchpad.fish.creatures.Fish;
 /**
  * Created by larissa on 27.11.15.
  */
-public interface FishTank {
+public interface FishTank extends Iterable<Fish> {
 
     Fish getFish(int index);
 

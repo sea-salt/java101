@@ -24,7 +24,17 @@ public class Main {
         fishTankList.addFish(goldy);
         fishTankList.addFish(bob);
         fishTankList.removeFish(goldy);
-        fishTankList.print();
+//        fishTankList.print();
+
+        for (Fish fish : fishTankList) {
+            System.out.println(fish);
+        }
+
+//        String alphabet = "Alphabet";
+//        char[] charArray = alphabet.toCharArray();
+//        for (char c : charArray) {
+//            System.out.println(c);
+//        }
 
 
 //        Object mysteryObject = new Shark("Sharky");

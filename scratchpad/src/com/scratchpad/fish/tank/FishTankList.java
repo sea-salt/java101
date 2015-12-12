@@ -3,6 +3,7 @@ package com.scratchpad.fish.tank;
 import com.scratchpad.fish.creatures.Fish;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -40,11 +41,16 @@ public class FishTankList implements FishTank {
         for (Fish fish : fishList) {
             System.out.println(fish);
         }
-
+//        class/type    variable name   calling method on fishList
 //        Iterator<Fish> fishIterator = fishList.iterator();
 //        while (fishIterator.hasNext()) {
 //            System.out.println(fishIterator.next());
 //            fishIterator.remove();
 //        }
+    }
+
+    @Override
+    public Iterator<Fish> iterator() {
+        return fishList.iterator();
     }
 }

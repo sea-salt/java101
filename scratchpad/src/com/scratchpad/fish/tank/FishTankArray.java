@@ -2,6 +2,8 @@ package com.scratchpad.fish.tank;
 
 import com.scratchpad.fish.creatures.Fish;
 
+import java.util.Iterator;
+
 /**
  * Created by larissa on 05.11.15.
  */
@@ -51,4 +53,9 @@ public class FishTankArray implements FishTank {
         }
     }
 
+
+    @Override
+    public Iterator<Fish> iterator() {
+        return null;
+    }
 }
