@@ -25,6 +25,16 @@ Menu Options:
 3 - Exit
 
 Please enter a menu option:
+-3
+
+Sorry, -3 is an invalid option
+
+Menu Options:
+1 - Addition
+2 - Subtraction
+3 - Exit
+
+Please enter a menu option:
 3
 
 Goodbye!
