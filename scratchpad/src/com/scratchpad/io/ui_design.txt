@@ -1,0 +1,30 @@
+--------------------------------
+Welcome to ZeUltra Calculator!
+--------------------------------
+
+Menu Options:
+1 - Addition
+2 - Subtraction
+3 - Exit
+
+Please enter a menu option:
+1
+
+Please enter the first number:
+3
+
+Please enter the second number:
+7
+
+The result is:
+10
+
+Menu Options:
+1 - Addition
+2 - Subtraction
+3 - Exit
+
+Please enter a menu option:
+3
+
+Goodbye!
