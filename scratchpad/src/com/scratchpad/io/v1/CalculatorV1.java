@@ -1,4 +1,4 @@
-package com.scratchpad.io;
+package com.scratchpad.io.v1;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -19,7 +19,7 @@ public class CalculatorV1 {
     private void start() {
         print("--------------------------------\n" +
                 "Welcome to ZeUltra Calculator!\n" +
-                "--------------------------------");
+                "--------------------------------\n");
 
         while(true) {
             printMenuOptions();
