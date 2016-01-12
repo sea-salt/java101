@@ -4,7 +4,7 @@ import com.scratchpad.fish.creatures.Fish;
 import com.scratchpad.fish.creatures.Goldfish;
 import com.scratchpad.fish.creatures.Shark;
 import com.scratchpad.fish.tank.FishTank;
-import com.scratchpad.fish.tank.FishTankList;
+import com.scratchpad.fish.tank.FishTankArray;
 
 public class Main {
 
@@ -13,22 +13,18 @@ public class Main {
         Fish goldy = new Goldfish("Goldy");
         Fish bob = new Shark("Bob");
 
-//        FishTank fishTankArray = new FishTankArray();
-//        fishTankArray.addFish(felix);
-//        fishTankArray.addFish(goldy);
-//        fishTankArray.addFish(bob);
-//        fishTankArray.print();
+        FishTank fishTank = new FishTankArray();
+//        FishTank fishTank = new FishTankList();
+        fishTank.addFish(felix);
+        fishTank.addFish(goldy);
+        fishTank.addFish(bob);
+        fishTank.removeFish(goldy);
+//        fishTank.print();
 
-        FishTank fishTankList = new FishTankList();
-        fishTankList.addFish(felix);
-        fishTankList.addFish(goldy);
-        fishTankList.addFish(bob);
-        fishTankList.removeFish(goldy);
-//        fishTankList.print();
-
-        for (Fish fish : fishTankList) {
+        for (Fish fish : fishTank) {
             System.out.println(fish);
         }
+
 
 //        String alphabet = "Alphabet";
 //        char[] charArray = alphabet.toCharArray();

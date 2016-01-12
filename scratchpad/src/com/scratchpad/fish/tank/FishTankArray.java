@@ -53,9 +53,24 @@ public class FishTankArray implements FishTank {
         }
     }
 
-
     @Override
     public Iterator<Fish> iterator() {
-        return null;
+        return new Iterator<Fish>() {
+            private int currentIndex;
+
+            @Override
+            public boolean hasNext() {
+                return currentIndex < fishArray.length;
+//                if (currentIndex < fishArray.length) {
+//                    return true;
+//                }
+//                return false;
+            }
+
+            @Override
+            public Fish next() {
+                return fishArray[currentIndex++];
+            }
+        };
     }
 }
