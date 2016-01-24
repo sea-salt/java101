@@ -4,7 +4,7 @@ public class ExitMenuOption extends MenuOption {
 
     @Override
     public String getShortcut() {
-        return "4";
+        return "x";
     }
 
     @Override
