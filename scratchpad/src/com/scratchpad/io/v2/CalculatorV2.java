@@ -5,6 +5,7 @@ import com.scratchpad.io.v2.menu.menuoptions.AdditionMenuOption;
 import com.scratchpad.io.v2.menu.menuoptions.ExitMenuOption;
 import com.scratchpad.io.v2.menu.menuoptions.MenuOption;
 import com.scratchpad.io.v2.menu.menuoptions.MultiplicationMenuOption;
+import com.scratchpad.io.v2.menu.menuoptions.RandomNameMenuOption;
 import com.scratchpad.io.v2.menu.menuoptions.RandomNumberMenuOption;
 import com.scratchpad.io.v2.menu.menuoptions.SubtractionMenuOption;
 
@@ -27,6 +28,7 @@ public class CalculatorV2 {
         MenuOption subtract = new SubtractionMenuOption(scanner);
         MenuOption multiply = new MultiplicationMenuOption(scanner);
         MenuOption randomize = new RandomNumberMenuOption(scanner);
+        MenuOption randomizeName = new RandomNameMenuOption();
         MenuOption exit = new ExitMenuOption();
 
         menu = new Menu();
@@ -34,6 +36,7 @@ public class CalculatorV2 {
         menu.addMenuOption(subtract);
         menu.addMenuOption(multiply);
         menu.addMenuOption(randomize);
+        menu.addMenuOption(randomizeName);
         menu.addMenuOption(exit);
     }
 

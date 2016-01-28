@@ -14,7 +14,7 @@ public class ExitMenuOption extends MenuOption {
 
     @Override
     public boolean execute() {
-        System.out.println("\nGoodbye!");
+        print("\nGoodbye!");
         return true;
     }
 }
