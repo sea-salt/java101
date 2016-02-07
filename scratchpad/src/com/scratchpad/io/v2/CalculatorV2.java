@@ -3,6 +3,7 @@ package com.scratchpad.io.v2;
 import com.scratchpad.io.v2.menu.Menu;
 import com.scratchpad.io.v2.menu.menuoptions.AdditionMenuOption;
 import com.scratchpad.io.v2.menu.menuoptions.ExitMenuOption;
+import com.scratchpad.io.v2.menu.menuoptions.FibonacciSequenceMenuOption;
 import com.scratchpad.io.v2.menu.menuoptions.MenuOption;
 import com.scratchpad.io.v2.menu.menuoptions.MultiplicationMenuOption;
 import com.scratchpad.io.v2.menu.menuoptions.RandomNameMenuOption;
@@ -29,6 +30,7 @@ public class CalculatorV2 {
         MenuOption multiply = new MultiplicationMenuOption(scanner);
         MenuOption randomize = new RandomNumberMenuOption(scanner);
         MenuOption randomizeName = new RandomNameMenuOption();
+        MenuOption fibonacci = new FibonacciSequenceMenuOption(scanner);
         MenuOption exit = new ExitMenuOption();
 
         menu = new Menu();
@@ -37,6 +39,7 @@ public class CalculatorV2 {
         menu.addMenuOption(multiply);
         menu.addMenuOption(randomize);
         menu.addMenuOption(randomizeName);
+        menu.addMenuOption(fibonacci);
         menu.addMenuOption(exit);
     }
 

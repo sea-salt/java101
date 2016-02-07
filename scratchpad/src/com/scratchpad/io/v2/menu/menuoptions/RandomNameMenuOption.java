@@ -23,24 +23,9 @@ public class RandomNameMenuOption extends MenuOption {
 
     @Override
     public boolean execute() {
-        // generate randomNumbers
-        // map them to letters
-        // receive randomName firsName with 4-8 letters
-        // receive randomName secondName with 4-12 letters
-//        int upperCaseA = 'A';
-//        char x = 65;
-//        char a = 'A';
-        int randomNameLength = Generator.generateRandomNumber(SHORTEST_NAME, LONGEST_FIRST_NAME);
-        String firstName = "";
-        for (int i = 0; i < randomNameLength; i++) {
-            if (i == 0) {
-                firstName += (char) Generator.generateRandomNumber('A','Z');
-            }
-            else {
-                firstName += (char) Generator.generateRandomNumber('a', 'z');
-            }
-        }
-        print(firstName);
+        String firstName = Generator.generateRandomName(SHORTEST_NAME, LONGEST_FIRST_NAME);
+        String lastName = Generator.generateRandomName(SHORTEST_NAME, LONGEST_LAST_NAME);
+        print(firstName + " " + lastName);
         return false;
     }
 }
