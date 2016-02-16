@@ -1,16 +1,25 @@
 package com.scratchpad.io.v2.menu.menuoptions;
 
 public abstract class MenuOption {
+    private static int globalId;
+    private final int personalId;
+
+    public MenuOption() {
+        globalId++;
+        personalId = globalId;
+    }
 
     /**
      * @return the menu option's keyboard shortcut
      */
-    public abstract String getShortcut();
+    public String getShortcut() {
+        return personalId + "";
+    }
 
     /**
      * @return the menu option's label
      */
-    public abstract String getLabel();
+    public abstract String getDescription();
 
     /**
      * Executes the menu option.
@@ -25,6 +34,6 @@ public abstract class MenuOption {
 
     @Override
     public String toString() {
-        return getShortcut() + " - " + getLabel();
+        return getShortcut() + " - " + getDescription();
     }
 }

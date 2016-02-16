@@ -9,12 +9,7 @@ public class SubtractionMenuOption extends TwoNumberMathMenuOption {
     }
 
     @Override
-    public String getShortcut() {
-        return "2";
-    }
-
-    @Override
-    public String getLabel() {
+    public String getDescription() {
         return "Subtraction";
     }
 

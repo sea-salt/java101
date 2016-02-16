@@ -15,12 +15,7 @@ public class FibonacciSequenceMenuOption extends SingleInputMenuOption {
     }
 
     @Override
-    public String getShortcut() {
-        return "6";
-    }
-
-    @Override
-    public String getLabel() {
+    public String getDescription() {
         return "Fibonacci Sequence";
     }
 

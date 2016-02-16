@@ -10,14 +10,8 @@ public class RandomNameMenuOption extends MenuOption {
     private static final int LONGEST_FIRST_NAME = 8;
     private static final int LONGEST_LAST_NAME = 12;
 
-
     @Override
-    public String getShortcut() {
-        return "5";
-    }
-
-    @Override
-    public String getLabel() {
+    public String getDescription() {
         return "Generate Random Name";
     }
 

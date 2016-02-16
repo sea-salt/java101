@@ -9,12 +9,7 @@ public class MultiplicationMenuOption extends TwoNumberMathMenuOption {
     }
 
     @Override
-    public String getShortcut() {
-        return "3";
-    }
-
-    @Override
-    public String getLabel() {
+    public String getDescription() {
         return "Multiplication";
     }
 

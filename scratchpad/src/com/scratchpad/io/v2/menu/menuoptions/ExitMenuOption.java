@@ -8,7 +8,7 @@ public class ExitMenuOption extends MenuOption {
     }
 
     @Override
-    public String getLabel() {
+    public String getDescription() {
         return "Exit";
     }
 

@@ -14,12 +14,7 @@ public class RandomNumberMenuOption extends TwoNumberMathMenuOption {
     }
 
     @Override
-    public String getShortcut() {
-        return "4";
-    }
-
-    @Override
-    public String getLabel() {
+    public String getDescription() {
         return "Generate Random Number";
     }
 
