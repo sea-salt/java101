@@ -7,6 +7,9 @@ import com.scratchpad.io.v2.menu.menuoptions.FibonacciSequenceMenuOption;
 import com.scratchpad.io.v2.menu.menuoptions.GridMenuOption;
 import com.scratchpad.io.v2.menu.menuoptions.MenuOption;
 import com.scratchpad.io.v2.menu.menuoptions.MultiplicationMenuOption;
+import com.scratchpad.io.v2.menu.menuoptions.NumberGridMenuOption;
+import com.scratchpad.io.v2.menu.menuoptions.NumberGridMenuOption2;
+import com.scratchpad.io.v2.menu.menuoptions.PrintWeekMenuOption;
 import com.scratchpad.io.v2.menu.menuoptions.RandomNameMenuOption;
 import com.scratchpad.io.v2.menu.menuoptions.RandomNumberMenuOption;
 import com.scratchpad.io.v2.menu.menuoptions.SubtractionMenuOption;
@@ -33,6 +36,9 @@ public class CalculatorV2 {
         MenuOption randomizeName = new RandomNameMenuOption();
         MenuOption fibonacci = new FibonacciSequenceMenuOption(scanner);
         MenuOption grid = new GridMenuOption(scanner);
+        MenuOption numberGrid = new NumberGridMenuOption();
+        MenuOption numberGrid2 = new NumberGridMenuOption2();
+        MenuOption printDaysOfWeek = new PrintWeekMenuOption();
         MenuOption exit = new ExitMenuOption();
 
         menu = new Menu();
@@ -42,7 +48,10 @@ public class CalculatorV2 {
 //        menu.addMenuOption(randomize);
 //        menu.addMenuOption(randomizeName);
 //        menu.addMenuOption(fibonacci);
-        menu.addMenuOption(grid);
+//        menu.addMenuOption(grid);
+//        menu.addMenuOption(numberGrid);
+//        menu.addMenuOption(numberGrid2);
+        menu.addMenuOption(printDaysOfWeek);
         menu.addMenuOption(exit);
     }
 
