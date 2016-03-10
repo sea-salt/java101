@@ -1,18 +1,10 @@
 package com.scratchpad.io.v2;
 
 import com.scratchpad.io.v2.menu.Menu;
-import com.scratchpad.io.v2.menu.menuoptions.AdditionMenuOption;
 import com.scratchpad.io.v2.menu.menuoptions.ExitMenuOption;
-import com.scratchpad.io.v2.menu.menuoptions.FibonacciSequenceMenuOption;
-import com.scratchpad.io.v2.menu.menuoptions.GridMenuOption;
 import com.scratchpad.io.v2.menu.menuoptions.MenuOption;
-import com.scratchpad.io.v2.menu.menuoptions.MultiplicationMenuOption;
-import com.scratchpad.io.v2.menu.menuoptions.NumberGridMenuOption;
-import com.scratchpad.io.v2.menu.menuoptions.NumberGridMenuOption2;
 import com.scratchpad.io.v2.menu.menuoptions.PrintWeekMenuOption;
-import com.scratchpad.io.v2.menu.menuoptions.RandomNameMenuOption;
-import com.scratchpad.io.v2.menu.menuoptions.RandomNumberMenuOption;
-import com.scratchpad.io.v2.menu.menuoptions.SubtractionMenuOption;
+import com.scratchpad.io.v2.menu.menuoptions.SwitchStatementMenuOption;
 
 import java.util.Scanner;
 
@@ -29,30 +21,19 @@ public class CalculatorV2 {
     public CalculatorV2() {
         scanner = new Scanner(System.in);
 
-        MenuOption add = new AdditionMenuOption(scanner);
-        MenuOption subtract = new SubtractionMenuOption(scanner);
-        MenuOption multiply = new MultiplicationMenuOption(scanner);
-        MenuOption randomize = new RandomNumberMenuOption(scanner);
-        MenuOption randomizeName = new RandomNameMenuOption();
-        MenuOption fibonacci = new FibonacciSequenceMenuOption(scanner);
-        MenuOption grid = new GridMenuOption(scanner);
-        MenuOption numberGrid = new NumberGridMenuOption();
-        MenuOption numberGrid2 = new NumberGridMenuOption2();
-        MenuOption printDaysOfWeek = new PrintWeekMenuOption();
-        MenuOption exit = new ExitMenuOption();
-
         menu = new Menu();
-//        menu.addMenuOption(add);
-//        menu.addMenuOption(subtract);
-//        menu.addMenuOption(multiply);
-//        menu.addMenuOption(randomize);
-//        menu.addMenuOption(randomizeName);
-//        menu.addMenuOption(fibonacci);
-//        menu.addMenuOption(grid);
-//        menu.addMenuOption(numberGrid);
-//        menu.addMenuOption(numberGrid2);
-        menu.addMenuOption(printDaysOfWeek);
-        menu.addMenuOption(exit);
+//        menu.addMenuOption(new AdditionMenuOption(scanner));
+//        menu.addMenuOption(new SubtractionMenuOption(scanner));
+//        menu.addMenuOption(new MultiplicationMenuOption(scanner));
+//        menu.addMenuOption(new RandomNumberMenuOption(scanner));
+//        menu.addMenuOption(new RandomNameMenuOption());
+//        menu.addMenuOption(new FibonacciSequenceMenuOption(scanner));
+//        menu.addMenuOption(new GridMenuOption(scanner));
+//        menu.addMenuOption(new NumberGridMenuOption());
+//        menu.addMenuOption(new NumberGridMenuOption2());
+        menu.addMenuOption(new PrintWeekMenuOption());
+        menu.addMenuOption(new SwitchStatementMenuOption());
+        menu.addMenuOption(new ExitMenuOption());
     }
 
     private void start() {

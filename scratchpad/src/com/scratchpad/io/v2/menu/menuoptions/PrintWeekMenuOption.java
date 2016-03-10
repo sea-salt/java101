@@ -23,7 +23,7 @@ public class PrintWeekMenuOption extends MenuOption {
     @Override
     public boolean execute() {
         for (DayOfWeek dayOfWeek : DayOfWeek.values()) {
-            print(dayOfWeek);
+            print(dayOfWeek.ordinal() + " - " + dayOfWeek);
         }
         return false;
     }
