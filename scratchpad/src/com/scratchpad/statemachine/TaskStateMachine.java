@@ -24,42 +24,62 @@ import java.util.Scanner;
 
 public class TaskStateMachine {
     private Scanner scanner;
+    private State currentState;
 
     public TaskStateMachine() {
         scanner = new Scanner(System.in);
     }
 
     public void run() {
-        State state = null;
+        currentState = State.OPEN;
+        outerloop:
         while (true) {
-            printCurrentState(state);
+            printCurrentState();
             System.out.println("Please enter a command:");
             switch(getUserInput()) {
                 case "start":
-                    if (State.OPEN.equals(state)) {
-                        state = State.IN_PROGRESS;
+                    if (State.OPEN.equals(currentState)) {
+                        currentState = State.IN_PROGRESS;
                     }
                     else {
-                        System.out.println("This command can only be used in OPEN state");
+                        System.out.println("This command can only be used in state: OPEN");
                     }
                     break;
                 case "complete":
-                    state = State.AWAITING_APPROVAL;
+                    if (State.IN_PROGRESS.equals(currentState)) {
+                        currentState = State.AWAITING_APPROVAL;
+                    }
+                    else {
+                        System.out.println("This command can only be used in state: IN_PROGRESS");
+                    }
                     break;
                 case "accept":
-                    state = State.FINISHED;
+                    if (State.AWAITING_APPROVAL.equals(currentState)) {
+                        currentState = State.FINISHED;
+                        break outerloop;
+                    }
+                    else {
+                        System.out.println("This command can only be used in state: AWAITING_APPROVAL");
+                    }
                     break;
                 case "reject":
-                    state = State.IN_PROGRESS;
+                    if (State.AWAITING_APPROVAL.equals(currentState)) {
+                        currentState = State.IN_PROGRESS;
+                    }
+                    else {
+                        System.out.println("This command can only be used in state: AWAITING_APPROVAL");
+                    }
                     break;
                 default:
                     System.out.println("This is invalid input. Please try again.");
             }
         }
+        // Print the final state before the program exits
+        printCurrentState();
     }
     
-    private void printCurrentState(State state) {
-        System.out.println("Current state: " + state);
+    private void printCurrentState() {
+        System.out.println("Current state: " + currentState);
     }
     
     private String getUserInput() {
