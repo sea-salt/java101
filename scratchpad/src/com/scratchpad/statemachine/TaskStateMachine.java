@@ -38,37 +38,19 @@ public class TaskStateMachine {
             System.out.println("Please enter a command:");
             switch(getUserInput()) {
                 case "start":
-                    if (State.OPEN.equals(currentState)) {
-                        currentState = State.IN_PROGRESS;
-                    }
-                    else {
-                        System.out.println("This command can only be used in state: OPEN");
-                    }
+                    setCurrentState(State.OPEN, State.IN_PROGRESS);
                     break;
                 case "complete":
-                    if (State.IN_PROGRESS.equals(currentState)) {
-                        currentState = State.AWAITING_APPROVAL;
-                    }
-                    else {
-                        System.out.println("This command can only be used in state: IN_PROGRESS");
-                    }
+                    setCurrentState(State.IN_PROGRESS, State.AWAITING_APPROVAL);
                     break;
                 case "accept":
-                    if (State.AWAITING_APPROVAL.equals(currentState)) {
-                        currentState = State.FINISHED;
+                    setCurrentState(State.AWAITING_APPROVAL, State.FINISHED);
+                    if (State.FINISHED.equals(currentState)) {
                         break outerloop;
-                    }
-                    else {
-                        System.out.println("This command can only be used in state: AWAITING_APPROVAL");
                     }
                     break;
                 case "reject":
-                    if (State.AWAITING_APPROVAL.equals(currentState)) {
-                        currentState = State.IN_PROGRESS;
-                    }
-                    else {
-                        System.out.println("This command can only be used in state: AWAITING_APPROVAL");
-                    }
+                    setCurrentState(State.AWAITING_APPROVAL, State.IN_PROGRESS);
                     break;
                 default:
                     System.out.println("This is invalid input. Please try again.");
@@ -76,6 +58,15 @@ public class TaskStateMachine {
         }
         // Print the final state before the program exits
         printCurrentState();
+    }
+    
+    private void setCurrentState(State requiredState, State newState) {
+        if (requiredState.equals(currentState)) {
+            currentState = newState;
+        }
+        else {
+            System.out.println("This command can only be used in state: " + requiredState);
+        }
     }
     
     private void printCurrentState() {
