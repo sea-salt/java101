@@ -28,11 +28,10 @@ public class TaskStateMachine {
 
     public TaskStateMachine() {
         scanner = new Scanner(System.in);
+        currentState = State.OPEN;
     }
 
     public void run() {
-        currentState = State.OPEN;
-        outerloop:
         while (true) {
             printCurrentState();
             System.out.println("Please enter a command:");
@@ -46,7 +45,9 @@ public class TaskStateMachine {
                 case "accept":
                     setCurrentState(State.AWAITING_APPROVAL, State.FINISHED);
                     if (State.FINISHED.equals(currentState)) {
-                        break outerloop;
+                        // Print the final state before the program exits
+                        printCurrentState();
+                        return;
                     }
                     break;
                 case "reject":
@@ -56,8 +57,6 @@ public class TaskStateMachine {
                     System.out.println("This is invalid input. Please try again.");
             }
         }
-        // Print the final state before the program exits
-        printCurrentState();
     }
     
     private void setCurrentState(State requiredState, State newState) {
